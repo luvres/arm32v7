@@ -1,5 +1,5 @@
 ### Ubuntu Slim
-#### Reference: (https://github.com/tianon/docker-brew-ubuntu-core)
+#### Reference: (https://hub.docker.com/r/arm32v7/ubuntu/)
 ```
 mkdir ROOTFS
 cp ubuntu-xenial-core-cloudimg-armhf-root-orig.tar.gz ROOTFS/ubuntu-xenial-core-cloudimg-armhf-root.tar.gz
