@@ -3,6 +3,22 @@
 ```
 docker pull izone/arm32v7
 ```
+
+##### run Nginx
+```
+mkdir $HOME/www
+
+docker run --name Nginx -h nginx \
+--link MariaDB:mariadb-host \
+-p 80:80 \
+-v $HOME/www:/usr/share/nginx/html \
+-d izone/arm32v7:nginx
+```
+##### Enable file browser mode
+```
+docker exec -ti ftp sed -i '/sendfile/s/on;/on;\n    autoindex       on;/' /etc/nginx/nginx.conf \
+&& docker restart ftp
+```
 #### Build in armhf
 ```
 docker build -t izone/arm32v7 .
