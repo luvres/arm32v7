@@ -1,7 +1,4 @@
-#FROM arm32v7/debian:stretch-slim
-#FROM alpine:3.5
-#FROM izone/arm
-FROM izone/arm32v7:alpine
+FROM izone/arm32v7
 MAINTAINER Leonardo Loures <luvres@hotmail.com>
 
 # sudo apt-get install qemu-user-static binfmt-support
